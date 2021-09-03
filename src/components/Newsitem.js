@@ -15,14 +15,10 @@ export default class NewsItem extends Component {
                         <div className="card-body">
                             <h5 className="card-title">{title}...</h5>
                             <p className="card-text">{description}...</p>
-                            <a href={newsUrl} target="_blank" className="btn btn-primary" rel="noreferrer">Read more</a>
+                            <a href={newsUrl} target="_blank" className="btn btn-dark" rel="noreferrer">Read more</a>
                         </div>
                     </div>
                 </div>
-                {/* <div className="container">
-                    <button type="button" class="btn btn-info">Previous</button>
-                    <button type="button" class="btn btn-info">Next</button>
-                </div> */}
             </>
         )
     }
