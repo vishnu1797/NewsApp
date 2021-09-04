@@ -17,13 +17,19 @@ export class News extends Component {
         country: PropTypes.string,
         category: PropTypes.string,
     }
-    constructor() {
-        super();
+
+    //Capitalize function to capital the first letter of our title(category)
+    capitalizeFirstLetter = (string)=>{
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    constructor(props) {
+        super(props);
         this.state = {
             articles: [],
             loading: false,
             page: 1
         }
+        document.title = `News app - ${this.capitalizeFirstLetter(this.props.category)} `;
     }
 
     // Creating a function upDate news which we can use in our required functions
@@ -65,7 +71,7 @@ export class News extends Component {
         return (
             <>
                 <div className="container my-3" style={{ margin: '23px' }}>
-                    <h2 className="text-center"><b>Top headlines - created with ReactJS</b></h2><hr /><br />
+                    <h2 className="text-center"><b>{`Top headlines - ${this.capitalizeFirstLetter(this.props.category) }`}</b></h2><hr /><br />
                    {this.state.loading && <Spinner/>}  
                     <div className="row">
                         { !this.state.loading && this.state.articles.map((element) => {

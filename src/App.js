@@ -23,7 +23,7 @@ export default class App extends Component {
           <Route exact path="/sports"> <News key="/sports" country={'in'} category={'sports'} pageSize={8}/> </Route>
           <Route exact path="/technology"> <News key="/technology" country={'in'} category={'technology'} pageSize={8}/> </Route>
           <Route exact path="/business"> <News key="/business" country={'in'} category={'business'} pageSize={8}/> </Route>
-          <Route exact path="/science"> <News key="/science" country={'in'} category={'science'} pageSize={8}/> </Route>
+          <Route exact path="/science"> <News key="/science" country={'in'} category={'sciencnpe'} pageSize={8}/> </Route>
         </Switch>
         </Router>
       </div>
